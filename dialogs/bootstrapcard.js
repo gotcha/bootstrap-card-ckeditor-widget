@@ -195,7 +195,8 @@ CKEDITOR.dialog.add( 'bootstrapcard', function( editor ) {
                                                                         var dialog = this.getDialog(), 
                                                                         elem = dialog.getContentElement('info', 'size');   
                                                                         if (evt.data.value == 'left') {
-                                                                                elem.enable();
+                                                                               elem.enable();
+                                                                               elem.setValue('half');
                                                                         } else {
                                                                                elem.disable();
                                                                                elem.setValue('');
@@ -213,7 +214,6 @@ CKEDITOR.dialog.add( 'bootstrapcard', function( editor ) {
 								id: 'size',
 								type: 'select',
 								items: [
-									[ 'None', '' ],
 									[ 'Fourth', 'fourth' ],
 									[ 'Half', 'half' ],
 								],
