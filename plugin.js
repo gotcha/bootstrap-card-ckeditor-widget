@@ -82,13 +82,13 @@ function bcw_init() {
     this.setData('align', 'top');
 };
 
-var img_src_regexp = /url\(([^)]*)\)/;
+var img_src_regexp = /url\("([^)]*)"\)/;
 function extract_image_src(images) {
     var image = images.getItem(0);
     var style = image.getStyle('background-image');
     var match = img_src_regexp.exec(style);
     if (match != null) {
-        return match[0];
+        return match[1];
     }
     return ''
 };
