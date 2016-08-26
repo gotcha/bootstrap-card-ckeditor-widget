@@ -30,7 +30,7 @@ CKEDITOR.plugins.add('bootstrapcard', {
             };
         widgetDef.editables["bootstrapcard_text"] = {
             selector: '.card-text',
-            allowedContent: 'br a p'
+            allowedContent: 'p br a[*]'
         };
         widgetDef.upcast = bcw_upcast;
         widgetDef.data = bcw_data;
